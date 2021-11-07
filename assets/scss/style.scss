@@ -1,0 +1,20 @@
+@import "components/variables";
+@import "components/colors";
+@import "components/typography";
+@import "components/dropdown";
+@import "components/icons";
+@import "components/slider";
+@import "components/content-wrapper.scss";
+@import "components/heading.scss";
+
+@import "libs/slick.scss";
+@import "libs/slick-theme.scss";
+
+@import "sections/header.scss";
+@import "sections/hero.scss";
+@import "sections/link-list.scss";
+@import "sections/article-list.scss";
+@import "sections/clients.scss";
+@import "sections/map.scss";
+@import "sections/cta.scss";
+@import "sections/footer.scss";

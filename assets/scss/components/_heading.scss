@@ -1,0 +1,18 @@
+.heading {
+  h5 {
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 13px;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 40px;
+      background-color: $font-black;
+      position: absolute;
+      top: 9px;
+      left: 0;
+    }
+  }
+}

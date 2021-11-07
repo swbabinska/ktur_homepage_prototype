@@ -1,0 +1,52 @@
+.dropdown {
+  &.show {
+    .dropdown-toggle {
+      color: $light-blue;
+
+      &:after {
+        border-color: $light-blue;
+      }
+    }
+  }
+
+  &-toggle {
+    &:hover {
+      &:after {
+        border-color: $light-blue;
+      }
+    }
+
+    &:after {
+      height: 7px;
+      width: 7px;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      border-bottom: 0;
+      border-left: 0;
+      transform: rotate(135deg);
+      border-color: $black;
+      transition: border-color .3s, transform .3s;
+    }
+  }
+
+  &-menu {
+    background-color: $gray;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid $light-blue;
+    top: 80%;
+    left: 7px;
+    padding: 20px 0;
+  }
+
+  &-item {
+    padding: 10px 40px;
+    font-weight: bold;
+    transition: color .3s;
+
+    &:hover {
+      background-color: $gray;
+      color: $light-blue;
+    }
+  }
+}

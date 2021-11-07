@@ -1,0 +1,106 @@
+.link-list {
+  text-align: center;
+  margin-top: 165px;
+  position: relative;
+
+  @media only screen and (max-width: 1240px) {
+    margin-top: 265px;
+  }
+
+  &:before {
+    content: '';
+    height: 100%;
+    width: calc(50% + 310px);
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    @include background-striped;
+
+    @media only screen and (max-width: 1240px) {
+      width: 100%;
+    }
+  }
+
+  &--inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1240px) {
+      flex-direction: column;
+    }
+
+    .heading {
+      @media only screen and (max-width: 1240px) {
+        margin-top: -100px;
+      }
+    }
+  }
+
+  &--links {
+    display: flex;
+    padding: 33px 40px;
+    position: relative;
+
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: center
+    }
+
+    a {
+      z-index: 2;
+      display: block;
+      margin-right: 40px;
+      width: 264px;
+      background-color: $white;
+      position: relative;
+      padding: 30px;
+      transition: background-color .3s, color .3s;
+      color: $font-black;
+
+      @media only screen and (max-width: 992px) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+      &:hover {
+        background-color: $dark-blue;
+        color: $white;
+        text-decoration: none;
+
+        .icon-topright {
+          background-color: $light-blue;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        @media only screen and (max-width: 992px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .icon-topright {
+        background-color: $dark-blue;
+        color: $white;
+        height: 40px;
+        width:40px;
+        position: absolute;
+        top:0;
+        right:0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color .3s;
+      }
+
+      img {
+        margin-bottom: 32px;
+      }
+
+      h5 {
+        margin-bottom: 13px;
+      }
+    }
+  }
+}

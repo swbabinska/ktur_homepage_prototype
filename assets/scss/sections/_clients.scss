@@ -1,0 +1,136 @@
+.clients {
+  text-align: center;
+  margin-top: 75px;
+
+  &--list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    @media only screen and (max-width: 1439px) {
+      justify-content: center;
+    }
+  }
+
+  &--list-item {
+    width: 180px;
+    height: 180px;
+    background-color: $dark-blue;
+    color: $white;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    position: relative;
+
+    @media only screen and (max-width: 1439px) {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    &:hover {
+      background-color: $blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        opacity: 1;
+      }
+
+      &:after {
+        background-color: $blue;
+      }
+
+      .clients--list-item-cover {
+        opacity: 0;
+        position: absolute;
+        left:-3000px
+      }
+
+      .clients--list-item-additional {
+        opacity: 1;
+        padding: 30px;
+        position: static;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top:20px;
+      left:20px;
+      width: 180px;
+      height: 180px;
+      z-index: -2;
+      opacity: 0;
+      transition: opacity .3s;
+      @include background-striped;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top:0px;
+      left:0px;
+      width: 180px;
+      height: 180px;
+      background-color: $dark-blue;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    &:nth-child(6n+6) {
+      margin-right: 0;
+
+      @media only screen and (max-width: 1439px) {
+        margin-right: 20px;
+      }
+    }
+
+    &.hashtag {
+      background-color: $light-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+
+      &:after , &:before {
+        display: none;
+      }
+    }
+
+    img {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    span {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 10px;
+      padding: 0 30px;
+    }
+  }
+
+  .heading {
+    margin-bottom: 20px;
+  }
+
+  &--list-item-cover {
+    transition: opacity .3s;
+    opacity: 1;
+  }
+
+  &--list-item-additional {
+    opacity: 0;
+    transition: opacity .3s;
+    position: absolute;
+    left:-3000px;
+  }
+}
