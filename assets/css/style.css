@@ -50,10 +50,16 @@ p {
   border: 1px solid #fff;
   color: #fff;
   padding: 0; }
+  .arrow-btn--blue {
+    background-color: #2e5593;
+    color: white; }
+    .arrow-btn--blue .icon-right {
+      background-color: #61c3d9; }
   .arrow-btn span {
     display: inline-block;
     height: 38px;
-    padding: 0 42px; }
+    padding: 0 42px;
+    line-height: 35px; }
   .arrow-btn .icon-right {
     font-size: 8px;
     display: inline-flex;
@@ -62,6 +68,13 @@ p {
     padding: 0;
     justify-content: center;
     border-left: 1px solid #fff; }
+
+a {
+  color: #2e5593;
+  transition: color .3s; }
+  a:hover {
+    color: #61c3d9;
+    text-decoration: none; }
 
 .dropdown.show .dropdown-toggle {
   color: #61c3d9; }
@@ -146,27 +159,27 @@ p {
   opacity: .5; }
   .background span:nth-child(1) {
     color: #2e5593;
-    top: 16%;
-    left: 8%;
-    animation-duration: 32.7s;
-    animation-delay: -26s;
-    transform-origin: -3vw 1vh;
+    top: 47%;
+    left: 28%;
+    animation-duration: 27.2s;
+    animation-delay: -18.5s;
+    transform-origin: 23vw -18vh;
     box-shadow: 520px 0 100px currentColor; }
   .background span:nth-child(2) {
-    color: #61c3d9;
-    top: 18%;
-    left: 88%;
-    animation-duration: 20.7s;
-    animation-delay: -16.1s;
-    transform-origin: 22vw 11vh;
-    box-shadow: -520px 0 100px currentColor; }
+    color: #2e5593;
+    top: 20%;
+    left: 24%;
+    animation-duration: 54.6s;
+    animation-delay: -40.5s;
+    transform-origin: 14vw -7vh;
+    box-shadow: 520px 0 100px currentColor; }
   .background span:nth-child(3) {
     color: #61c3d9;
-    top: 30%;
-    left: 91%;
-    animation-duration: 59.3s;
-    animation-delay: -34.4s;
-    transform-origin: 9vw 8vh;
+    top: 8%;
+    left: 30%;
+    animation-duration: 24.3s;
+    animation-delay: -28.3s;
+    transform-origin: 14vw 13vh;
     box-shadow: -520px 0 100px currentColor; }
 
 @keyframes move {
@@ -192,6 +205,22 @@ p {
     position: absolute;
     top: 9px;
     left: 0; }
+
+.breadcrumb {
+  background-color: #fff;
+  padding: 18px 80px 20px; }
+  .breadcrumb-item {
+    font-size: 13px;
+    color: #edf1f6; }
+    .breadcrumb-item + .breadcrumb-item {
+      padding-left: 15px;
+      padding-right: 10px; }
+    .breadcrumb-item a {
+      color: #202124;
+      transition: color .3s; }
+      .breadcrumb-item a:hover {
+        color: #61c3d9;
+        text-decoration: none; }
 
 /* Slider */
 .slick-slider {
@@ -964,5 +993,82 @@ section {
 footer {
   text-align: center;
   background-color: #000540; }
+
+.form--inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+.form--heading {
+  margin-bottom: 24px; }
+  .form--heading h2 {
+    margin-bottom: 20px; }
+.form--submit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0 28px; }
+.form-group {
+  margin-bottom: 33px; }
+  .form-group small {
+    margin-top: 8px;
+    display: inline-block; }
+.form--radio-box {
+  border-top: 1px solid #8090a9;
+  border-bottom: 1px solid #8090a9;
+  padding: 30px 0;
+  margin-bottom: 26px; }
+  .form--radio-box .form-group {
+    background-color: #d2dae7;
+    padding: 15px 15px 1px;
+    margin-bottom: 19px; }
+  .form--radio-box p {
+    margin-bottom: 10px; }
+  .form--radio-box a {
+    color: #61c3d9;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold; }
+    .form--radio-box a:after {
+      content: '+';
+      font-weight: normal;
+      font-size: 20px;
+      display: inline-block;
+      margin-left: 13px; }
+.form form, .form h3, .form p {
+  width: 100%;
+  max-width: 660px; }
+.form form {
+  background-color: #edf1f6;
+  padding: 60px;
+  margin-bottom: 70px; }
+  .form form label {
+    display: block;
+    font-weight: bold; }
+  .form form input[type=text],
+  .form form input[type=password],
+  .form form input[type=email] {
+    width: 100%;
+    height: 50px; }
+  .form form .form-check {
+    padding: 0; }
+    .form form .form-check input[type=radio] {
+      position: absolute;
+      left: -5000px; }
+    .form form .form-check label {
+      padding: 13px 13px 13px 45px;
+      background-color: #edf1f6;
+      font-weight: normal;
+      margin-bottom: 17px;
+      position: relative;
+      border: 1px solid #8090a9; }
+      .form form .form-check label:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid #8090a9;
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        top: 15px;
+        left: 14px; }
 
 /*# sourceMappingURL=style.css.map */

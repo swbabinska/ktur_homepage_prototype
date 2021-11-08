@@ -5,6 +5,8 @@ $white: #fff;
 $black: #000;
 $font-black: #202124;
 $gray: #edf1f6;
+$gray2: #d2dae7;
+$dark-gray: #8090a9;
 
 @mixin background-striped {
   background-image: linear-gradient(135deg, #dddddd 14.29%, #ffffff 14.29%, #ffffff 50%, #dddddd 50%, #dddddd 64.29%, #ffffff 64.29%, #ffffff 100%);

@@ -64,10 +64,20 @@ p {
   color: $white;
   padding: 0;
 
+  &--blue {
+    background-color: $blue;
+    color: white;
+
+    .icon-right {
+      background-color: $light-blue
+    }
+  }
+
   span {
     display: inline-block;
     height: 38px;
     padding: 0 42px;
+    line-height: 35px;
   }
 
   .icon-right {
@@ -78,5 +88,15 @@ p {
     padding: 0;
     justify-content: center;
     border-left: 1px solid $white;
+  }
+}
+
+a {
+  color: $blue;
+  transition: color .3s;
+
+  &:hover {
+    color: $light-blue;
+    text-decoration: none;
   }
 }
